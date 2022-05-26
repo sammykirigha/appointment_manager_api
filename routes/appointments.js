@@ -40,6 +40,7 @@ router.delete("/:docId/:id", (req, res) => {
 
     try {
         deleteAppointmentByDocIdAndId(docId, id);
+        res.send("Appointment deleted")
     } catch (error) {
         res.status(404).send({ message: "Failed to delete Appointment" });
     }
